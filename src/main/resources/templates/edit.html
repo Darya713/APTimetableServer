@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/starter-template.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link href="../_layout.html" rel="import"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var link = document.querySelector('link[rel=import]').import;
+    var doc = link.querySelector('.head');
+    document.body.appendChild(doc.cloneNode(true));
+</script>
+<div class="container" id="Schedule">
+    <label for="date">Select day</label>
+    <select id="date" class="form-control">
+        <option value="1">ПН</option>
+        <option value="2">ВТ</option>
+        <option value="3">СР</option>
+        <option value="4">ЧТ</option>
+        <option value="5">ПТ</option>
+        <option value="6">СБ</option>
+    </select>
+    <table class="table table-responsive table-bordered main-table">
+        <thead>
+        <tr class="row-head">
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>        
+        <tr id="1,1" class="1">
+            <td class="time0" rowspan="2">8.00-9.35</td>
+        </tr>
+        <tr id="1,0" class="1"></tr>
+        <tr id="2,1" class="2">
+            <td class="time1" rowspan="2">9.50-11.25</td>
+        </tr>
+        <tr id="2,0" class="2"></tr>
+        <tr id="3,1" class="3">
+            <td class="time2" rowspan="2">11.40-13.15</td>
+        </tr>
+        <tr id="3,0" class="3"></tr>
+        <tr id="4,1" class="4">
+            <td class="time3" rowspan="2">13.50-15.25</td>
+        </tr>
+        <tr id="4,0" class="4"></tr>
+        <tr id="5,1" class="5">
+            <td class="time4" rowspan="2">15.40-17.15</td>
+        </tr>
+        <tr id="5,0" class="5"></tr>
+        <tr id="6,1" class="6">
+            <td class="time5" rowspan="2">17.30-19.05</td>
+        </tr>
+        <tr id="6,0" class="6"></tr>
+        <tr id="7,1" class="7">
+            <td class="time6" rowspan="2">19.20-20.55</td>
+        </tr>
+        <tr id="7,0" class="7"></tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success edit-timetable">Edit</button>
+    <button class="btn btn-danger" id="back-timetable">Back</button>
+    <div class="window">
+        <div class="form-group">
+            <label for="typeLoad">Type of load</label>
+            <select id="typeLoad" class="form-control"></select>
+            <label for="discipline">Discipline</label>
+            <select id="discipline" class="form-control"></select>
+            <label for="auditorium">Auditorium</label>
+            <select id="auditorium" class="form-control"></select>
+            <label for="teachers">Teachers</label>
+            <select id="teachers" class="form-control"></select>
+            <br />
+            <button class="btn btn-success" type="submit" id="postTimetable">Save</button>
+            <button class="btn btn-warning" type="submit" id="updateTimetable">Update</button>
+            <button class="btn btn-danger" type="submit" id="deleteTimetable">Delete</button>
+            <br />
+            <button class="btn btn-default edit-timetable">Back</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--  <script src="js/jquery-1.10.2.min.js"></script> -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/fulledit.js"></script>
+<script type="text/javascript" src="../js/edit.js"></script>
+<script src="../js/logout.js"></script>
+</body>
+</html>
